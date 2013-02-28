@@ -17,15 +17,6 @@
     "email": "mikeywbrooks@gmail.com",
     "url": "http://github.com/mwbrooks"
   }],
-  "maintainers": [{
-    "name": "Gord Tanner",
-    "email": "gtanner@gmail.com",
-    "url": "http://github.com/gtanner"
-  }, {
-    "name": "Michael Brooks",
-    "email": "mikeywbrooks@gmail.com",
-    "url": "http://github.com/mwbrooks"
-  }],
   "licenses": [{
     "type": "Apache"
   }],
