@@ -32,6 +32,6 @@ To run tests run `npm test`
     Gord Tanner <gtanner@gmail.com>
     Micheal Brooks <mikeywbrooks@gmail.com>
 
-[travis-ci-img]: https://travis-ci.org/gtanner/qrcode-terminal.png?branch=master
+[travis-ci-img]: https://travis-ci.org/gtanner/qrcode-terminal.png
 [travis-ci-url]: https://travis-ci.org/gtanner/qrcode-terminal
 
