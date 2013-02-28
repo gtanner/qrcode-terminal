@@ -15,7 +15,17 @@ and used:
 
 To display some data to the terminal just call:
 
-    qrcode.render("This will be a QRCode Eh!");
+    qrcode.generate("This will be a QRCode Eh!");
+
+If you don't want to display to the terminal but just want to string you can provide a callback:
+
+    qrcode.generate("http://www.github.com", function (qrcode) { });
+
+# Developing
+
+To setup the development envrionment run `npm install`
+
+To run tests run `npm test`
 
 # Contributers:
 

@@ -1,9 +1,13 @@
 {
   "name": "qrcode-terminal",
   "keywords": ["ansi", "ascii", "qrcode", "console"],
-  "version" : "0.3.0",
+  "version" : "0.4.0",
   "description" : "QRCodes, in the terminal",
   "homepage": "https://github.com/gtanner/qrcode-terminal",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gtanner/qrcode-terminal"
+  },
   "contributors": [{
     "name": "Gord Tanner",
     "email": "gtanner@gmail.com",
@@ -19,5 +23,13 @@
   "main": "./lib/main",
   "dependencies": {
     "colors": "*"
+  },
+  "devDependencies": {
+    "sinon": "*",
+    "mocha": "*",
+    "expect.js": "*"
+  },
+  "scripts": {
+    "test": "node example/basic.js && ./node_modules/mocha/bin/mocha -R nyan"
   }
 }
