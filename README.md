@@ -1,4 +1,4 @@
-# QRCode Terminal Edition
+# QRCode Terminal Edition [![Build Status][travis-ci-img]][travis-ci-url]
 Going where no QRCode has gone before.
 
 # Install
@@ -31,3 +31,7 @@ To run tests run `npm test`
 
     Gord Tanner <gtanner@gmail.com>
     Micheal Brooks <mikeywbrooks@gmail.com>
+
+[travis-ci-img]: https://travis-ci.org/gtanner/qrcode-terminal.png?branch=master
+[travis-ci-url]: https://travis-ci.org/gtanner/qrcode-terminal
+

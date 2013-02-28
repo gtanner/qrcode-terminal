@@ -1,2 +1,2 @@
-var foo = require('../lib/main');
-foo.generate('this is the bomb');
+var qrcode = require('../lib/main');
+qrcode.generate('this is the bomb');
