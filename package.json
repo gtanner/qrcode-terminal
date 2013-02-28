@@ -1,7 +1,7 @@
 {
   "name": "qrcode-terminal",
   "keywords": ["ansi", "ascii", "qrcode", "console"],
-  "version" : "0.4.0",
+  "version" : "0.5.0",
   "description" : "QRCodes, in the terminal",
   "homepage": "https://github.com/gtanner/qrcode-terminal",
   "repository": {
@@ -9,6 +9,15 @@
     "url": "https://github.com/gtanner/qrcode-terminal"
   },
   "contributors": [{
+    "name": "Gord Tanner",
+    "email": "gtanner@gmail.com",
+    "url": "http://github.com/gtanner"
+  }, {
+    "name": "Michael Brooks",
+    "email": "mikeywbrooks@gmail.com",
+    "url": "http://github.com/mwbrooks"
+  }],
+  "maintainers": [{
     "name": "Gord Tanner",
     "email": "gtanner@gmail.com",
     "url": "http://github.com/gtanner"

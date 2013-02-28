@@ -27,7 +27,7 @@ To setup the development envrionment run `npm install`
 
 To run tests run `npm test`
 
-# Contributers:
+# Contributers
 
     Gord Tanner <gtanner@gmail.com>
     Micheal Brooks <mikeywbrooks@gmail.com>
