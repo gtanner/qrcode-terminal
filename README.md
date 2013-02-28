@@ -11,7 +11,7 @@ and used:
 
     var qrcode = require('qrcode-terminal');
 
-# Useage
+# Usage
 
 To display some data to the terminal just call:
 
