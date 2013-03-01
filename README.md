@@ -2,6 +2,8 @@
 
 > Going where no QRCode has gone before.
 
+![Basic Example][basic-example-img]
+
 # Install
 
 Can be installed with:
@@ -37,4 +39,5 @@ To run tests run `npm test`
 
 [travis-ci-img]: https://travis-ci.org/gtanner/qrcode-terminal.png
 [travis-ci-url]: https://travis-ci.org/gtanner/qrcode-terminal
+[basic-example-img]: https://raw.github.com/gtanner/qrcode-terminal/master/example/basic.png
 
