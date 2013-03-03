@@ -32,5 +32,21 @@ describe('in the main module', function() {
                 expect(console.log.called).to.be(false);
             });
         });
+
+        describe("the QR Code", function () {
+            it("should be a string", function (done) {
+                qrcode.generate("test", function(result) {
+                    expect(result).to.be.a('string');
+                    done();
+                });
+            });
+
+            it("should not end with a newline", function (done) {
+                qrcode.generate("test", function(result) {
+                    expect(result).not.to.match(/\n$/);
+                    done();
+                });
+            });
+        });
     });
 });
