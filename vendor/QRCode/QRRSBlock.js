@@ -257,13 +257,13 @@ QRRSBlock.getRSBlocks = function(typeNumber, errorCorrectLevel) {
 	
 	var rsBlock = QRRSBlock.getRsBlockTable(typeNumber, errorCorrectLevel);
 	
-	if (rsBlock == undefined) {
+	if (rsBlock === undefined) {
 		throw new Error("bad rs block @ typeNumber:" + typeNumber + "/errorCorrectLevel:" + errorCorrectLevel);
 	}
 
 	var length = rsBlock.length / 3;
 	
-	var list = new Array();
+	var list = [];
 	
 	for (var i = 0; i < length; i++) {
 
@@ -277,7 +277,7 @@ QRRSBlock.getRSBlocks = function(typeNumber, errorCorrectLevel) {
 	}
 	
 	return list;
-}
+};
 
 QRRSBlock.getRsBlockTable = function(typeNumber, errorCorrectLevel) {
 
@@ -293,6 +293,6 @@ QRRSBlock.getRsBlockTable = function(typeNumber, errorCorrectLevel) {
 	default :
 		return undefined;
 	}
-}
+};
 
 module.exports = QRRSBlock;

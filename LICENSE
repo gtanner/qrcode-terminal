@@ -218,3 +218,5 @@ This product also include the following software:
  DENSO WAVE INCORPORATED
    http://www.denso-wave.com/qrcode/faqpatent-e.html
 
+Located in ./vendor/QRCode
+- project has been modified to work in Node and some refactoring was done for code cleanup

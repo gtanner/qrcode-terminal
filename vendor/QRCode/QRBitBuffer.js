@@ -1,5 +1,5 @@
 function QRBitBuffer() {
-	this.buffer = new Array();
+	this.buffer = [];
 	this.length = 0;
 }
 

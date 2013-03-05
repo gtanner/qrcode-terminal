@@ -1,13 +1,13 @@
 var QRMath = require('./QRMath');
 
 function QRPolynomial(num, shift) {
-	if (num.length == undefined) {
+	if (num.length === undefined) {
 		throw new Error(num.length + "/" + shift);
 	}
 
 	var offset = 0;
 
-	while (offset < num.length && num[offset] == 0) {
+	while (offset < num.length && num[offset] === 0) {
 		offset++;
 	}
 
@@ -54,8 +54,8 @@ QRPolynomial.prototype = {
 			num[i] = this.get(i);
 		}
 		
-		for (var i = 0; i < e.getLength(); i++) {
-			num[i] ^= QRMath.gexp(QRMath.glog(e.get(i) ) + ratio);
+		for (var x = 0; x < e.getLength(); x++) {
+			num[x] ^= QRMath.gexp(QRMath.glog(e.get(x) ) + ratio);
 		}
 	
 		// recursive call

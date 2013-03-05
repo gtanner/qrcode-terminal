@@ -1,9 +1,3 @@
-//---------------------------------------------------------------------
-// QR8bitByte
-//---------------------------------------------------------------------
-//
-// NOTES: 
-// Updated for this project to work in node (see line: 1242)
 var QRMode = require('./QRMode');
 
 function QR8bitByte(data) {
@@ -13,7 +7,7 @@ function QR8bitByte(data) {
 
 QR8bitByte.prototype = {
 
-	getLength : function(buffer) {
+	getLength : function() {
 		return this.data.length;
 	},
 	

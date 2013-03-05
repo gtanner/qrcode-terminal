@@ -1,7 +1,7 @@
 {
   "name": "qrcode-terminal",
   "keywords": ["ansi", "ascii", "qrcode", "console"],
-  "version" : "0.8.0",
+  "version" : "0.9.0",
   "description" : "QRCodes, in the terminal",
   "homepage": "https://github.com/gtanner/qrcode-terminal",
   "repository": {
@@ -27,9 +27,10 @@
   "devDependencies": {
     "sinon": "*",
     "mocha": "*",
-    "expect.js": "*"
+    "expect.js": "*",
+    "jshint": "*"
   },
   "scripts": {
-    "test": "node example/basic.js && ./node_modules/mocha/bin/mocha -R nyan"
+    "test": "./node_modules/jshint/bin/jshint lib vendor && node example/basic.js && ./node_modules/mocha/bin/mocha -R nyan"
   }
 }
