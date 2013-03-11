@@ -45,6 +45,11 @@ If you don't want to display to the terminal but just want to string you can pro
 - Linux
 - Windows
 
+# Server-side
+
+[node-qrcode][node-qrcode-url] is a popular server-side QRCode generator that
+renders to a `canvas` object.
+
 # Developing
 
 To setup the development envrionment run `npm install`
@@ -59,4 +64,5 @@ To run tests run `npm test`
 [travis-ci-img]: https://travis-ci.org/gtanner/qrcode-terminal.png
 [travis-ci-url]: https://travis-ci.org/gtanner/qrcode-terminal
 [basic-example-img]: https://raw.github.com/gtanner/qrcode-terminal/master/example/basic.png
+[node-qrcode-url]: https://github.com/soldair/node-qrcode
 
