@@ -1,7 +1,7 @@
 {
   "name": "qrcode-terminal",
   "keywords": ["ansi", "ascii", "qrcode", "console"],
-  "version" : "0.9.0",
+  "version" : "0.9.1",
   "description" : "QRCodes, in the terminal",
   "homepage": "https://github.com/gtanner/qrcode-terminal",
   "repository": {
@@ -21,9 +21,6 @@
     "type": "Apache 2.0"
   }],
   "main": "./lib/main",
-  "dependencies": {
-    "colors": "*"
-  },
   "devDependencies": {
     "sinon": "*",
     "mocha": "*",
