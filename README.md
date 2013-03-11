@@ -26,6 +26,12 @@ If you don't want to display to the terminal but just want to string you can pro
         console.log(qrcode);
     });
 
+# Support
+
+- OS X
+- Windows
+- Linux (untested)
+
 # Developing
 
 To setup the development envrionment run `npm install`
