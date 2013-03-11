@@ -12,7 +12,7 @@ var qrcode = require('../lib/main'),
  * Parse the process name and input
  */
 
-var name = process.argv[1].replace(/^.*[\\\/]/, ''),
+var name = process.argv[1].replace(/^.*[\\\/]/, '').replace('.js', ''),
     input = process.argv[2];
 
 /*!
