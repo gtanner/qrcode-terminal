@@ -21,6 +21,10 @@
     "type": "Apache 2.0"
   }],
   "main": "./lib/main",
+  "bin": {
+      "qrcode-terminal": "./bin/qrcode-terminal.js"
+  },
+  "preferGlobal": "false",
   "devDependencies": {
     "sinon": "*",
     "mocha": "*",
