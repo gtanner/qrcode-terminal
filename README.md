@@ -29,8 +29,8 @@ If you don't want to display to the terminal but just want to string you can pro
 # Support
 
 - OS X
+- Linux
 - Windows
-- Linux (untested)
 
 # Developing
 
