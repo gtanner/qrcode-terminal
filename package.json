@@ -24,7 +24,7 @@
   "bin": {
       "qrcode-terminal": "./bin/qrcode-terminal.js"
   },
-  "preferGlobal": "false",
+  "preferGlobal": false,
   "devDependencies": {
     "sinon": "*",
     "mocha": "*",
