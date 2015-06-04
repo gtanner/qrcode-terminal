@@ -22,6 +22,11 @@ To display some data to the terminal just call:
 
     qrcode.generate('This will be a QRCode, eh!');
 
+You can even specify the error level (default is 'L'):
+    
+    qrcode.setErrorLevel(error='Q');
+    qrcode.generate('This will be a QRCode with error level Q!');
+
 If you don't want to display to the terminal but just want to string you can provide a callback:
 
     qrcode.generate('http://github.com', function (qrcode) {

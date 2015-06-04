@@ -48,5 +48,16 @@ describe('in the main module', function() {
                 });
             });
         });
+
+        describe('the error level', function () {
+            it('should default to 1', function() {
+                expect(qrcode.error).to.be(1);
+            });
+
+            it('should not allow other levels', function() {
+                qrcode.setErrorLevel = 'something';
+                expect(qrcode.error).to.be(1);
+            }); 
+        });
     });
 });
