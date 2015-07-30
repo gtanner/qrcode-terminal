@@ -25,6 +25,9 @@
       "qrcode-terminal": "./bin/qrcode-terminal.js"
   },
   "preferGlobal": false,
+  "dependencies": {
+    "eslint-plugin-smells": "*"
+  },
   "devDependencies": {
     "sinon": "*",
     "mocha": "*",
