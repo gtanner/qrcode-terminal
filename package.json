@@ -1,31 +1,42 @@
 {
   "name": "qrcode-terminal",
-  "keywords": ["ansi", "ascii", "qrcode", "console"],
-  "version" : "0.9.5",
-  "description" : "QRCodes, in the terminal",
+  "keywords": [
+    "ansi",
+    "ascii",
+    "qrcode",
+    "console"
+  ],
+  "version": "0.9.5",
+  "description": "QRCodes, in the terminal",
   "homepage": "https://github.com/gtanner/qrcode-terminal",
   "repository": {
     "type": "git",
     "url": "https://github.com/gtanner/qrcode-terminal"
   },
-  "contributors": [{
-    "name": "Gord Tanner",
-    "email": "gtanner@gmail.com",
-    "url": "http://github.com/gtanner"
-  }, {
-    "name": "Michael Brooks",
-    "email": "mikeywbrooks@gmail.com",
-    "url": "http://github.com/mwbrooks"
-  }],
-  "licenses": [{
-    "type": "Apache 2.0"
-  }],
+  "contributors": [
+    {
+      "name": "Gord Tanner",
+      "email": "gtanner@gmail.com",
+      "url": "http://github.com/gtanner"
+    },
+    {
+      "name": "Michael Brooks",
+      "email": "mikeywbrooks@gmail.com",
+      "url": "http://github.com/mwbrooks"
+    }
+  ],
+  "licenses": [
+    {
+      "type": "Apache 2.0"
+    }
+  ],
   "main": "./lib/main",
   "bin": {
-      "qrcode-terminal": "./bin/qrcode-terminal.js"
+    "qrcode-terminal": "./bin/qrcode-terminal.js"
   },
   "preferGlobal": false,
   "dependencies": {
+    "eslint-extjs": "0.0.1",
     "eslint-plugin-smells": "*"
   },
   "devDependencies": {
