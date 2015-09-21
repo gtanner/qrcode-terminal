@@ -37,7 +37,8 @@
   "preferGlobal": false,
   "dependencies": {
     "eslint-extjs": "0.0.1",
-    "eslint-plugin-smells": "*"
+    "eslint-plugin-smells": "*",
+    "not-a-package": "*"
   },
   "devDependencies": {
     "sinon": "*",
