@@ -44,7 +44,8 @@
     "sinon": "*",
     "mocha": "*",
     "expect.js": "*",
-    "jshint": "*"
+    "jshint": "*",
+    "eslint": "^1.4.0"
   },
   "scripts": {
     "test": "./node_modules/jshint/bin/jshint lib vendor && node example/basic.js && ./node_modules/mocha/bin/mocha -R nyan"
