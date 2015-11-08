@@ -33,6 +33,14 @@ If you don't want to display to the terminal but just want to string you can pro
         console.log(qrcode);
     });
 
+If you want to display small output, provide `opts` with `small`:
+
+    qrcode.generate('This will be a small QRCode, eh!', {small: true});
+
+    qrcode.generate('This will be a small QRCode, eh!', {small: true}, function (qrcode) {
+        console.log(qrcode)
+    });
+
 # Command-Line
 
 ## Install
