@@ -23,7 +23,7 @@ To display some data to the terminal just call:
     qrcode.generate('This will be a QRCode, eh!');
 
 You can even specify the error level (default is 'L'):
-    
+
     qrcode.setErrorLevel('Q');
     qrcode.generate('This will be a QRCode with error level Q!');
 
@@ -33,7 +33,7 @@ If you don't want to display to the terminal but just want to string you can pro
         console.log(qrcode);
     });
 
-If you want to display small output, provide `opts` with `small`:
+If you want to display small output, provide `small` option (small output is **experimental** and may display disorted with some fonts. It's disabled on *Windows*):
 
     qrcode.generate('This will be a small QRCode, eh!', {small: true});
 
