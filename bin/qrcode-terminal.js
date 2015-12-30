@@ -12,15 +12,20 @@ var qrcode = require('../lib/main'),
 /*!
  * Parse the process name and input
  */
-var argv = parseArgs(process.argv, opts={});
+var argv = parseArgs(process.argv, opts={
+    boolean: ['v','h','s','help','version']
+});
 
 var name = argv._[1].replace(/^.*[\\\/]/, '').replace('.js', ''),
-    input = argv._[2];
+    input = argv._[2],
+    opt = {
+        small: false
+    };
 
 /*!
  * Display help
  */
-if (typeof argv.h !== 'undefined' || typeof argv.help !== 'undefined') {
+if (argv.h || argv.help) {
     help();
     process.exit();
 }
@@ -28,9 +33,16 @@ if (typeof argv.h !== 'undefined' || typeof argv.help !== 'undefined') {
 /*!
  * Display version
  */
-if (typeof argv.v !== 'undefined' || typeof argv.version !== 'undefined') {
+if (argv.v || argv.version) {
     version();
     process.exit();
+}
+
+/*!
+ * Small QR code
+ */
+if (argv.s || argv.small) {
+    opt.small = true;
 }
 
 /*!
@@ -46,7 +58,7 @@ if (typeof argv.e !== 'undefined' && typeof argv.e === 'string') {
  * Render the QR Code
  */
 if (typeof input !== 'undefined') {
-    qrcode.generate(input);
+    qrcode.generate(input, opt);
 }
 
 /*!
