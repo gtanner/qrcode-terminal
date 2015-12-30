@@ -13,7 +13,7 @@ var qrcode = require('../lib/main'),
  * Parse the process name and input
  */
 var argv = parseArgs(process.argv, opts={
-    boolean: ['v','h','s','help','version']
+    boolean: ['v','h','s','help','version','small']
 });
 
 var name = argv._[1].replace(/^.*[\\\/]/, '').replace('.js', ''),
@@ -72,6 +72,7 @@ function help() {
         '',
         'Options:',
         '  -e [L|M|Q|H], --errorcorrectlevel=[L|M|Q|H]   set error correction level (Default: L)',
+        '  -s, --small                                   print a smaller qr-code',
         '  -h, --help                                    output usage information',
         '  -v, --version                                 output version number',
         '',
@@ -79,7 +80,7 @@ function help() {
         '',
         '  $ ' + name + ' hello',
         '  $ ' + name + ' "hello world"',
-        '  $ ' + name + ' -e Q "hello world"',
+        '  $ ' + name + ' -e Q -s "hello world"',
         ''
     ].join('\n'));
 }
