@@ -22,7 +22,7 @@
   }],
   "main": "./lib/main",
   "bin": {
-      "qrcode-terminal": "./bin/qrcode-terminal.js"
+      "qr": "./bin/qrcode-terminal.js"
   },
   "preferGlobal": false,
   "devDependencies": {
