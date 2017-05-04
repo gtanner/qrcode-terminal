@@ -49,8 +49,8 @@ If you want to display small output, provide `opts` with `small`:
 
 ## Usage
 
-    $ qrcode-terminal --help
-    $ qrcode-terminal 'http://github.com'
+    $ qr --help
+    $ qr 'http://github.com'
 
 # Support
 
