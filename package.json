@@ -1,7 +1,7 @@
 {
   "name": "qrcode-terminal",
   "keywords": ["ansi", "ascii", "qrcode", "console"],
-  "version" : "0.11.0",
+  "version" : "0.12.0",
   "description" : "QRCodes, in the terminal",
   "homepage": "https://github.com/gtanner/qrcode-terminal",
   "repository": {
