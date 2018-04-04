@@ -52,6 +52,7 @@ If you want to display small output, provide `opts` with `small`:
     $ qrcode-terminal --help
     $ qrcode-terminal 'http://github.com'
     $ echo 'http://github.com' | qrcode-terminal
+    $ qrcode-terminal    # qr code generated from clipboard
 
 # Support
 
