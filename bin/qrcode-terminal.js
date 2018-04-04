@@ -19,10 +19,12 @@ var name = process.argv[1].replace(/^.*[\\\/]/, '').replace('.js', '');
  */
 
 if (process.stdin.isTTY) {
-    // called with input as argument, e.g.:
+    // called with input as argument or from clipboard, e.g.:
     // ./qrcode-terminal.js "INPUT"
 
-    var input = process.argv[2];
+    // If not passed argument, then read from clipboard
+    var input = process.argv[2] ? process.argv[2] : require('clipboardy').readSync();
+
     handleInput(input);
 } else {
     // called with piped input, e.g.:
