@@ -10,8 +10,7 @@ describe('in the main module', function() {
             });
 
             afterEach(function () {
-                sinon.sandbox.restore();
-                console.log.reset();
+                sinon.restore();
             });
 
             it('logs to the console', function () {
@@ -28,7 +27,8 @@ describe('in the main module', function() {
             });
 
             it('will not call the console.log method', function () {
-                qrcode.generate('test', sinon.spy());
+                sinon.spy(console, 'log');
+                qrcode.generate('test', function(){});
                 expect(console.log.called).to.be(false);
             });
         });
