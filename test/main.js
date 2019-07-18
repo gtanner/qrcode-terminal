@@ -48,11 +48,5 @@ describe('in the main module', function() {
                 });
             });
         });
-
-        describe('the error level', function () {
-            it('should default to \'L\'', function() {
-                expect(qrcode.errorLevel).to.be('L');
-            });
-        });
-    });
+   });
 });
