@@ -26,6 +26,11 @@ The default error correction level is 'L', but you can set it to one of 'L', 'M'
 
     qrcode.generate('This will be a QRCode with error level Q!', {errorLevel: 'Q'});
 
+A type number may be specified as an integer in the range 1..40 in order to set the data capacity,
+according to this [reference table][qrcode-demo-reference]:
+
+    qrcode.generate('This will be a QRCode with data capacity type 7', {typeNumber: 7});
+
 Instead of the default behavior, you can pass a callback to handle the output:
 
     qrcode.generate('http://github.com', function (qrcode) {
@@ -79,4 +84,5 @@ To run tests run `yarn test`
 [travis-ci-url]: https://travis-ci.org/gtanner/qrcode-terminal
 [basic-example-img]: https://raw.github.com/gtanner/qrcode-terminal/master/example/basic.png
 [node-qrcode-url]: https://github.com/soldair/node-qrcode
+[qrcode-demo-reference]: https://kazuhikoarase.github.io/qrcode-generator/js/demo/
 
