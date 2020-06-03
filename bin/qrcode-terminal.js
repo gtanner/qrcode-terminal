@@ -46,7 +46,7 @@ if (process.stdin.isTTY) {
  */
 
 function handleInput(input) {
-
+    var opts;
     /*!
      * Display help
      */
@@ -68,8 +68,17 @@ function handleInput(input) {
     /*!
      * Render the QR Code
      */
+    if (input === '-s' || input === '--small') {
+        opts = {
+            small: true
+        };
+    }
 
-    qrcode.generate(input);
+    /*!
+     * Render the QR Code
+     */
+
+    qrcode.generate(input, opts);
 }
 
 /*!
@@ -84,6 +93,7 @@ function help() {
         'Options:',
         '  -h, --help           output usage information',
         '  -v, --version        output version number',
+        '  -s, --small          output small qrcode',
         '',
         'Examples:',
         '',
