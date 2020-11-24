@@ -18,7 +18,7 @@
     "url": "http://github.com/mwbrooks"
   }],
   "licenses": [{
-    "type": "Apache 2.0"
+    "type": "Apache-2.0"
   }],
   "main": "./lib/main",
   "bin": {
