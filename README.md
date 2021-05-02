@@ -41,6 +41,11 @@ If you want to display small output, provide `opts` with `small`:
         console.log(qrcode)
     });
 
+If you want to invert the output, provide `opts` with `small`:
+
+    qrcode.generate('This will be a inverted QRCode, yeey!', inverted: true});
+
+
 # Command-Line
 
 ## Install
