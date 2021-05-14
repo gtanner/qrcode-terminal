@@ -17,9 +17,7 @@
     "email": "mikeywbrooks@gmail.com",
     "url": "http://github.com/mwbrooks"
   }],
-  "licenses": [{
-    "type": "Apache 2.0"
-  }],
+  "license": "Apache-2.0",
   "main": "./lib/main",
   "bin": {
       "qrcode-terminal": "./bin/qrcode-terminal.js"
