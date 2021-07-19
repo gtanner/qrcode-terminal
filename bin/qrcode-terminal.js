@@ -4,9 +4,7 @@
  * Module dependencies.
  */
 
-var qrcode = require('../lib/main'),
-    path = require('path'),
-    fs = require('fs');
+var qrcode = require('../lib/main');
 
 /*!
  * Parse the process name
@@ -73,7 +71,7 @@ function handleInput(input) {
 }
 
 /*!
- * Helper functions
+ * Print help
  */
 
 function help() {
@@ -93,9 +91,10 @@ function help() {
     ].join('\n'));
 }
 
-function version() {
-    var packagePath = path.join(__dirname, '..', 'package.json'),
-        packageJSON = JSON.parse(fs.readFileSync(packagePath), 'utf8');
+/*!
+ * Print version
+ */
 
-    console.log(packageJSON.version);
+function version() {
+    console.log(require('../package.json').version);
 }
