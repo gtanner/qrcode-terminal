@@ -1,18 +1,18 @@
-var expect = require('expect.js'),
-    qrcode = require('./../lib/main'),
-    sinon = require('sinon');
+import expect from 'expect.js';
+import * as qrcode from './../lib/main.mjs';
+import sinon from 'sinon';
 
 describe('in the main module', function() {
     describe('the generate method', function () {
-        describe('when not providing a callback', function () {
-            beforeEach(function () {
-                sinon.stub(console, 'log');
-            });
+        beforeEach(function () {
+            sinon.stub(console, 'log');
+        });
 
-            afterEach(function () {
-                sinon.sandbox.restore();
-                console.log.reset();
-            });
+        afterEach(function () {
+            sinon.restore();
+        });
+
+        describe('when not providing a callback', function () {
 
             it('logs to the console', function () {
                 qrcode.generate('test');
@@ -22,7 +22,7 @@ describe('in the main module', function() {
 
         describe('when providing a callback', function () {
             it('will call the callback', function () {
-                var cb = sinon.spy();
+                const cb = sinon.spy();
                 qrcode.generate('test', cb);
                 expect(cb.called).to.be(true);
             });
@@ -55,7 +55,7 @@ describe('in the main module', function() {
             });
 
             it('should not allow other levels', function() {
-                qrcode.setErrorLevel = 'something';
+                qrcode.setErrorLevel('something');
                 expect(qrcode.error).to.be(1);
             }); 
         });

@@ -1,4 +1,4 @@
-var QRErrorCorrectLevel = require('./QRErrorCorrectLevel');
+import QRErrorCorrectLevel from './QRErrorCorrectLevel.mjs';
 
 function QRRSBlock(totalCount, dataCount) {
 	this.totalCount = totalCount;
@@ -253,25 +253,25 @@ QRRSBlock.RS_BLOCK_TABLE = [
 	[20, 45, 15, 61, 46, 16]
 ];
 
-QRRSBlock.getRSBlocks = function(typeNumber, errorCorrectLevel) {
+QRRSBlock.getRSBlocks = (typeNumber, errorCorrectLevel) => {
 	
-	var rsBlock = QRRSBlock.getRsBlockTable(typeNumber, errorCorrectLevel);
+	const rsBlock = QRRSBlock.getRsBlockTable(typeNumber, errorCorrectLevel);
 	
 	if (rsBlock === undefined) {
 		throw new Error("bad rs block @ typeNumber:" + typeNumber + "/errorCorrectLevel:" + errorCorrectLevel);
 	}
 
-	var length = rsBlock.length / 3;
+	const length = rsBlock.length / 3;
 	
-	var list = [];
+	const list = [];
 	
-	for (var i = 0; i < length; i++) {
+	for (let i = 0; i < length; i++) {
 
-		var count = rsBlock[i * 3 + 0];
-		var totalCount = rsBlock[i * 3 + 1];
-		var dataCount  = rsBlock[i * 3 + 2];
+		const count = rsBlock[i * 3 + 0];
+		const totalCount = rsBlock[i * 3 + 1];
+		const dataCount  = rsBlock[i * 3 + 2];
 
-		for (var j = 0; j < count; j++) {
+		for (let j = 0; j < count; j++) {
 			list.push(new QRRSBlock(totalCount, dataCount) );	
 		}
 	}
@@ -279,7 +279,7 @@ QRRSBlock.getRSBlocks = function(typeNumber, errorCorrectLevel) {
 	return list;
 };
 
-QRRSBlock.getRsBlockTable = function(typeNumber, errorCorrectLevel) {
+QRRSBlock.getRsBlockTable = (typeNumber, errorCorrectLevel) => {
 
 	switch(errorCorrectLevel) {
 	case QRErrorCorrectLevel.L :
@@ -295,4 +295,4 @@ QRRSBlock.getRsBlockTable = function(typeNumber, errorCorrectLevel) {
 	}
 };
 
-module.exports = QRRSBlock;
+export default QRRSBlock;

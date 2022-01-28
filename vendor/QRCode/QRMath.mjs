@@ -1,4 +1,4 @@
-var QRMath = {
+const QRMath = {
 
 	glog : function(n) {
 	
@@ -27,7 +27,7 @@ var QRMath = {
 	LOG_TABLE : new Array(256)
 
 };
-	
+
 for (var i = 0; i < 8; i++) {
 	QRMath.EXP_TABLE[i] = 1 << i;
 }
@@ -41,4 +41,4 @@ for (var i = 0; i < 255; i++) {
 	QRMath.LOG_TABLE[QRMath.EXP_TABLE[i] ] = i;
 }
 
-module.exports = QRMath;
+export default QRMath;
