@@ -4,8 +4,7 @@
  * Module dependencies.
  */
 
-var qrcode = require('../lib/main'),
-    path = require('path'),
+const path = require('path'),
     fs = require('fs');
 
 /*!
@@ -69,7 +68,9 @@ function handleInput(input) {
      * Render the QR Code
      */
 
-    qrcode.generate(input);
+    import('../lib/main.mjs').then((qrcode) => {
+        qrcode.generate(input);
+    })
 }
 
 /*!

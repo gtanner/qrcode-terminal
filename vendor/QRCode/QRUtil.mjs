@@ -1,9 +1,9 @@
-var QRMode = require('./QRMode');
-var QRPolynomial = require('./QRPolynomial');
-var QRMath = require('./QRMath');
-var QRMaskPattern = require('./QRMaskPattern');
+import QRMode from './QRMode.mjs';
+import QRPolynomial from './QRPolynomial.mjs';
+import QRMath from './QRMath.mjs';
+import QRMaskPattern from './QRMaskPattern.mjs';
 
-var QRUtil = {
+const QRUtil = {
 
     PATTERN_POSITION_TABLE : [
         [],
@@ -53,7 +53,7 @@ var QRUtil = {
     G15_MASK : (1 << 14) | (1 << 12) | (1 << 10)    | (1 << 4) | (1 << 1),
 
     getBCHTypeInfo : function(data) {
-        var d = data << 10;
+        let d = data << 10;
         while (QRUtil.getBCHDigit(d) - QRUtil.getBCHDigit(QRUtil.G15) >= 0) {
             d ^= (QRUtil.G15 << (QRUtil.getBCHDigit(d) - QRUtil.getBCHDigit(QRUtil.G15) ) );    
         }
@@ -61,7 +61,7 @@ var QRUtil = {
     },
 
     getBCHTypeNumber : function(data) {
-        var d = data << 12;
+        let d = data << 12;
         while (QRUtil.getBCHDigit(d) - QRUtil.getBCHDigit(QRUtil.G18) >= 0) {
             d ^= (QRUtil.G18 << (QRUtil.getBCHDigit(d) - QRUtil.getBCHDigit(QRUtil.G18) ) );    
         }
@@ -70,7 +70,7 @@ var QRUtil = {
 
     getBCHDigit : function(data) {
 
-        var digit = 0;
+        let digit = 0;
 
         while (data !== 0) {
             digit++;
@@ -104,9 +104,9 @@ var QRUtil = {
 
     getErrorCorrectPolynomial : function(errorCorrectLength) {
 
-        var a = new QRPolynomial([1], 0);
+        let a = new QRPolynomial([1], 0);
 
-        for (var i = 0; i < errorCorrectLength; i++) {
+        for (let i = 0; i < errorCorrectLength; i++) {
             a = a.multiply(new QRPolynomial([1, QRMath.gexp(i)], 0) );
         }
 
@@ -161,10 +161,10 @@ var QRUtil = {
 
     getLostPoint : function(qrCode) {
         
-        var moduleCount = qrCode.getModuleCount();
-        var lostPoint = 0;
-        var row = 0; 
-        var col = 0;
+        const moduleCount = qrCode.getModuleCount();
+        let lostPoint = 0;
+        let row = 0; 
+        let col = 0;
 
         
         // LEVEL1
@@ -173,16 +173,16 @@ var QRUtil = {
 
             for (col = 0; col < moduleCount; col++) {
 
-                var sameCount = 0;
-                var dark = qrCode.isDark(row, col);
+                let sameCount = 0;
+                const dark = qrCode.isDark(row, col);
 
-                for (var r = -1; r <= 1; r++) {
+                for (let r = -1; r <= 1; r++) {
 
                     if (row + r < 0 || moduleCount <= row + r) {
                         continue;
                     }
 
-                    for (var c = -1; c <= 1; c++) {
+                    for (let c = -1; c <= 1; c++) {
 
                         if (col + c < 0 || moduleCount <= col + c) {
                             continue;
@@ -208,7 +208,7 @@ var QRUtil = {
 
         for (row = 0; row < moduleCount - 1; row++) {
             for (col = 0; col < moduleCount - 1; col++) {
-                var count = 0;
+                let count = 0;
                 if (qrCode.isDark(row,     col    ) ) count++;
                 if (qrCode.isDark(row + 1, col    ) ) count++;
                 if (qrCode.isDark(row,     col + 1) ) count++;
@@ -251,7 +251,7 @@ var QRUtil = {
 
         // LEVEL4
         
-        var darkCount = 0;
+        let darkCount = 0;
 
         for (col = 0; col < moduleCount; col++) {
             for (row = 0; row < moduleCount; row++) {
@@ -261,7 +261,7 @@ var QRUtil = {
             }
         }
         
-        var ratio = Math.abs(100 * darkCount / moduleCount / moduleCount - 50) / 5;
+        const ratio = Math.abs(100 * darkCount / moduleCount / moduleCount - 50) / 5;
         lostPoint += ratio * 10;
 
         return lostPoint;       
@@ -269,4 +269,4 @@ var QRUtil = {
 
 };
 
-module.exports = QRUtil;
+export default QRUtil;
